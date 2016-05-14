@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ficha cadastral</title>
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+        <h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+    </h:head>
+    <h:body>
+        <f:metadata>
+            <f:viewParam name="servidor" value="#{fichaServidorBean.servidor}" />
+        </f:metadata>
+        <div class="container-fluid">
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">Identificação</th>
+                        <th colspan="2" style="text-align: center;">Documentação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Nome</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.nome}" /></td>
+                        <th>CPF</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.cpf}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Sexo</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.sexo.descricao}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Data de Nascimento</th>
+                        <td>
+                            <h:outputText value="#{fichaServidorBean.servidor.dataNascimento}">
+                                <f:convertDateTime pattern="dd/MM/yyyy" />
+                            </h:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nacionalidade</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.nacionalidade.descricao}" /></td>
+                    </tr>
+                    <tr>
+                        <th>País de nascimento</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.naturalidade.pais.nome}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Estado civil</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.estadoCivil.descricao}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Tipo sanguíneo</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.tipoSanguineo.sigla}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Nome da mãe</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.nomeMae}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Nome do pai</th>
+                        <td><h:outputText value="#{fichaServidorBean.servidor.nomePai}" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </h:body>
+</html>
+

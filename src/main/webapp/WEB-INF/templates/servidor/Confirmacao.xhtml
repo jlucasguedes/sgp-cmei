@@ -1,0 +1,79 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <p:panel header="Dados completos do servidor">
+        <p:messages autoUpdate="true" />
+        <div class="ui-fluid">
+            <p:panelGrid columns="2" columnClasses="ui-grid-col-2, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder">
+                <h:outputText value="Nome" />
+                <h:outputText value="#{cadastroServidorBean.servidor.nome}" />
+
+                <h:outputText value="Sexo"/>
+                <h:outputText value="#{cadastroServidorBean.servidor.sexo.descricao}" />
+
+                <h:outputText value="Data de Nascimento" />
+                <h:outputText value="#{cadastroServidorBean.servidor.dataNascimento}"> 
+                    <f:convertDateTime pattern="dd/MM/yyyy" />
+                </h:outputText>
+
+                <h:outputText value="Nacionalidade"/>
+                <h:outputText value="#{cadastroServidorBean.servidor.nacionalidade.descricao}" />
+
+                <h:outputText value="UF de nascimento" />
+                <h:outputText value="#{cadastroServidorBean.estadoNaturalidade.nome}" />
+
+                <h:outputText value="Cidade de nascimento" />
+                <h:outputText value="#{cadastroServidorBean.servidor.naturalidade.cidade.nome}" />
+
+                <h:outputText value="Estado civil" />
+                <h:outputText value="#{cadastroServidorBean.servidor.estadoCivil.descricao}" />
+
+                <h:outputText value="Tipo sanguíneo"/>
+                <h:outputText value="#{cadastroServidorBean.servidor.tipoSanguineo.sigla}"/>
+
+                <h:outputText value="Nome da mãe" />
+                <h:outputText value="#{cadastroServidorBean.servidor.nomeMae}"/>
+
+                <h:outputText value="Nome do pai" />
+                <h:outputText value="#{cadastroServidorBean.servidor.nomePai}"/>
+
+                <h:outputText value="CPF" />
+                <h:outputText value="#{cadastroServidorBean.servidor.cpf}"/>
+
+                <h:outputText value="RG" />
+                <h:outputText value="#{cadastroServidorBean.servidor.registroGeral.numero}" />
+
+                <h:outputText value="Orgão emissor" />
+                <h:outputText value="#{cadastroServidorBean.servidor.registroGeral.orgaoExpedidor}" />
+
+                <h:outputText value="Data de expedição" />
+                <h:outputText value="#{cadastroServidorBean.servidor.registroGeral.dataExpedicao}">
+                    <f:convertDateTime pattern="dd/MM/yyyy" />
+                </h:outputText>
+
+                <h:outputText value="PIS/PASEP" />
+                <h:outputText value="#{cadastroServidorBean.servidor.pisPasep}"/>
+
+                <h:outputText value="Certificado Militar" />
+                <h:outputText value="#{cadastroServidorBean.servidor.certificadoMilitar}" />
+
+                <h:outputText value="Titulo de Eleitor" />
+                <h:outputText value="#{cadastroServidorBean.servidor.tituloEleitoral.titulo}"/>
+
+                <h:outputText value="Zona" />
+                <h:outputText value="#{cadastroServidorBean.servidor.tituloEleitoral.zona}"/>
+
+                <h:outputText value="Seção" />
+                <h:outputText value="#{cadastroServidorBean.servidor.tituloEleitoral.secao}"/>
+            </p:panelGrid>
+        </div>
+
+        <p:commandButton action="#{cadastroServidorBean.salvar()}" value="Salvar" update="@form" />
+    </p:panel>
+
+
+</ui:composition>

@@ -1,0 +1,40 @@
+﻿INSERT INTO NACIONALIDADE VALUES(1, 'Brasileira');
+INSERT INTO NACIONALIDADE VALUES(2, 'Brasileira: Nascido no exterior ou naturalizado');
+INSERT INTO NACIONALIDADE VALUES(3, 'Estrangeira');
+
+INSERT INTO orgao_expedidor VALUES(1, '10', 'SSP');
+INSERT INTO orgao_expedidor VALUES(2, '40', 'Ministérios Militares');
+INSERT INTO orgao_expedidor VALUES(3, '41', 'Ministério da Aeronáutica');
+INSERT INTO orgao_expedidor VALUES(4, '42', 'Ministério do Exército');
+INSERT INTO orgao_expedidor VALUES(5, '43', 'Ministério da Marinha');
+INSERT INTO orgao_expedidor VALUES(6, '44', 'Polícia Federal');
+INSERT INTO orgao_expedidor VALUES(7, '60', 'Carteira de Identidade Órgãos  Classista');
+INSERT INTO orgao_expedidor VALUES(8, '61', 'Conselho Regional de Administração');
+INSERT INTO orgao_expedidor VALUES(9, '62', 'Conselho Regional de Assist. Social');
+INSERT INTO orgao_expedidor VALUES(10, '63', 'Conselho Regional de Biblioteconomia');
+INSERT INTO orgao_expedidor VALUES(11, '64', 'Conselho Regional de Contabilidade');
+INSERT INTO orgao_expedidor VALUES(12, '65', 'Conselho Regional de Corretores Imóveis');
+INSERT INTO orgao_expedidor VALUES(13, '83', 'Conselho Regional Economia');
+INSERT INTO orgao_expedidor VALUES(14, '66', 'Conselho Regional de Enfermagem');
+INSERT INTO orgao_expedidor VALUES(15, '67', 'Conselho Regional de Engenharia, Arquitetura e Agronomia');
+INSERT INTO orgao_expedidor VALUES(16, '68', 'Conselho Regional de Estatística');
+INSERT INTO orgao_expedidor VALUES(17, '69', 'Conselho Regional de Farmácia');
+INSERT INTO orgao_expedidor VALUES(18, '70', 'Conselho Regional de Fisioterapia e Terapia Ocupacional');
+INSERT INTO orgao_expedidor VALUES(19, '71', 'Conselho Regional de Medicina');
+INSERT INTO orgao_expedidor VALUES(20, '72', 'Conselho Regional de Medicina Veterinária');
+INSERT INTO orgao_expedidor VALUES(21, '73', 'Ordem dos Músicos do Brasil');
+INSERT INTO orgao_expedidor VALUES(22, '74', 'Conselho Regional de Nutrição');
+INSERT INTO orgao_expedidor VALUES(23, '75', 'Conselho Regional de Odontologia');
+INSERT INTO orgao_expedidor VALUES(24, '76', 'Conselho Regional de Profissionais de Relações Públicas');
+INSERT INTO orgao_expedidor VALUES(25, '77', 'Conselho Regional de Psicologia');
+INSERT INTO orgao_expedidor VALUES(26, '78', 'Conselho Regional de Química');
+INSERT INTO orgao_expedidor VALUES(27, '79', 'Conselho Regional de Representantes Comerciais');
+INSERT INTO orgao_expedidor VALUES(28, '80', 'Ordem dos Advogados do Brasil');
+INSERT INTO orgao_expedidor VALUES(29, '81', 'Outros Emissores');
+INSERT INTO orgao_expedidor VALUES(30, '82', 'Documento Estrangeiro');
+
+INSERT INTO cargo (id, descricao) VALUES(1, 'Agente Administrativo Educacional');
+INSERT INTO cargo (id, descricao) VALUES(2, 'Técnico Administrativo Educacional');
+
+INSERT INTO funcao (id, descricao) VALUES(1, 'Secretário Geral');
+INSERT INTO funcao (id, descricao) VALUES(2, 'Vigia Diurno');

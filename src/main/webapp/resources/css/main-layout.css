@@ -1,0 +1,66 @@
+/* Base */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 50px;
+    z-index: 9999;
+
+    background-color: #1e94d2;
+}
+
+.content {
+    padding: 0 15px;
+    margin-top: 20px;   
+}
+
+.menu-bar {
+    padding: 0 15px;
+    margin-top: 60px;    
+}
+
+.rotulo {
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.rotulo:after {
+    content: ":"
+}
+
+/*Posicionando input filter SelectOneMenus*/
+.ui-selectonemenu {
+    width: 200px !important;
+}
+
+.ui-selectonemenu-filter-container {
+    width: 91% !important;
+    padding: 30px;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-filter {
+    width: 91% !important;
+    padding-right: 25px !important;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-filter-container .ui-icon {
+    right: 0 !important;
+}
+
+.ui-panelgrid tbody,
+.ui-panelgrid tbody tr,
+.ui-panelgrid tbody tr td {
+    border: none !important;   
+}
+

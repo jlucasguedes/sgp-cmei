@@ -1,0 +1,60 @@
+/* BASE */
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* TABVIEW */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    color: #555;
+}
+
+@media (max-width: 640px) {
+    .ui-tabs.ui-tabs-top > .ui-tabs-nav li {
+        width: 100%;
+    }
+}
+
+/* PANELGRID */
+.ui-panelgrid.panelgrid-noborder .ui-grid-responsive {
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .ui-panelgrid.panelgrid-noborder .ui-grid-responsive .ui-grid-row {
+        border: none;
+    }
+    .ui-grid-col-2 {
+        /*height: 20px !important;*/
+        text-align: left !important;
+    }
+    .ui-grid-col-2 {
+        font-weight: bold;
+        text-align: left !important;
+    }
+}
+
+.ui-grid-col-4 {
+
+    /* height: 40px;*/
+}
+
+.ui-grid-col-2 {
+    font-weight: bold;
+
+}
+
+.ui-selectonemenu-filter-container {
+    width: 95% !important;
+    padding: 30px;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-filter {
+    width: 95% !important;
+    padding-right: 25px !important;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-filter-container .ui-icon {
+    right: 0 !important;
+}

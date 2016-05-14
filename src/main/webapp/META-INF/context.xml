@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/sgp-cmei"/>
+<Context path="/sgp-cmei">
+  <!-- disables storage of sessions across restarts -->
+  <Manager pathname=""/>
+  <Resource auth="Container" factory="org.jboss.weld.resources.ManagerObjectFactory" name="BeanManager" type="javax.enterprise.inject.spi.BeanManager"/>
+</Context>
