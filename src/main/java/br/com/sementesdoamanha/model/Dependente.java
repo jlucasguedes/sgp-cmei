@@ -19,6 +19,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  *
@@ -47,6 +49,7 @@ public class Dependente implements Serializable {
         this.id = id;
     }
 
+    @NotBlank
     public String getNome() {
         return nome;
     }
@@ -55,6 +58,7 @@ public class Dependente implements Serializable {
         this.nome = nome;
     }
 
+    @NotNull
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
     public Date getDataNascimento() {
@@ -65,6 +69,7 @@ public class Dependente implements Serializable {
         this.dataNascimento = dataNascimento;
     }
 
+    @NotBlank
     public String getParentesco() {
         return parentesco;
     }

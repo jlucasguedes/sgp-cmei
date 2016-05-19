@@ -18,6 +18,7 @@
 
 
         <h:form id="frm">
+            <p:growl autoUpdate="true" id="growlCadServidor"   />
 
             <p:wizard backLabel="Anterior" nextLabel="Próximo">
 
@@ -51,8 +52,11 @@
                 <p:tab id="confirm" title="Confirmação">
                     <ui:include src="/WEB-INF/templates/servidor/Confirmacao.xhtml" />
                 </p:tab> 
+            </p:wizard> 
 
-            </p:wizard>   
+            <ui:include src="/WEB-INF/templates/servidor/contato/DialogContato.xhtml" />
+            <ui:include src="/WEB-INF/templates/servidor/dependente/DialogDependente.xhtml" />
+
         </h:form>
 
     </ui:define>

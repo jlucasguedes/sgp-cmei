@@ -5,8 +5,7 @@
                 xmlns:p="http://primefaces.org/ui">
 
 
-    <p:panel header="Dados completos do servidor">
-        <p:messages autoUpdate="true" />
+    <p:panel header="Dados completos do servidor" id="confirmacao">
         <div class="ui-fluid">
             <p:panelGrid columns="2" columnClasses="ui-grid-col-2, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder">
                 <h:outputText value="Nome" />
@@ -72,7 +71,8 @@
             </p:panelGrid>
         </div>
 
-        <p:commandButton action="#{cadastroServidorBean.salvar()}" value="Salvar" update="@form" />
+        <p:commandButton action="#{cadastroServidorBean.salvar()}" value="Salvar" 
+                         update="@form" validateClient="false"/>
     </p:panel>
 
 

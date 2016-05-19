@@ -4,8 +4,7 @@
                 xmlns:p="http://primefaces.org/ui" >
 
     <div class="ui-fluid">
-        <p:panel header="Dados bancários">
-            <p:messages />
+        <p:panel header="Dados bancários" id="admissao">
             <p:panelGrid columns="2" columnClasses="ui-grid-col-2, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder">
                 <p:outputLabel value="Matrícula" for="matricula" />
                 <p:inputText id="matricula" value="#{cadastroServidorBean.servidor.admissao.matricula}" />

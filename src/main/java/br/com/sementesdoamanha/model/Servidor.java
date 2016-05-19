@@ -28,6 +28,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.br.CPF;
 
 /**
@@ -190,7 +191,8 @@ public class Servidor implements Serializable {
         this.nomePai = nomePai;
     }
 
-    @Email
+    @NotEmpty
+    @Email    
     @Column(name = "email", nullable = false)
     public String getEmail() {
         return email;

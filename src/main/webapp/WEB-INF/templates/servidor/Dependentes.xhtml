@@ -5,8 +5,7 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <div class="ui-fluid">
-        <p:panel header="Dados para contato">
-            <p:messages />
+        <p:panel header="Dados para contato" id="dependente">
             <p:panelGrid columns="2" columnClasses="ui-grid-col-4, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder" >
 
                 <h:outputText value="Clique no botão para adicionar um dependente." />
@@ -36,38 +35,5 @@
             </p:dataTable>
         </p:panel>
     </div>
-
-
-
-    <p:dialog widgetVar="dependenteDialog" header="Cadastrar dependente" 
-              resizable="false" style="width: 400px;" responsive="true">
-
-        <h:panelGroup id="dependentePanel" layout="block" styleClass="ui-fluid">
-
-            <p:messages autoUpdate="false" id="msgDialog" />
-
-            <p:panelGrid columns="2" layout="grid" styleClass="panelgrid-noborder"
-                         columnClasses="ui-grid-col-4, ui-grid-col-8">
-
-                <p:outputLabel value="Nome" for="nomeDependente" />
-                <p:inputText id="nomeDependente" value="#{cadastroServidorBean.dependente.nome}" />
-
-                <p:outputLabel value="Data de nascimento" for="dataNascimentoDependente" />
-                <p:calendar id="dataNascimentoDependente" pattern="dd/MM/yyyy" locale="pt_BR"
-                            navigator="true" yearRange="1930:2016" value="#{cadastroServidorBean.dependente.dataNascimento}"/>
-
-                <p:outputLabel value="Parentesco" for="parentesco" />
-                <p:inputText id="parentesco" value="#{cadastroServidorBean.dependente.parentesco}"/>
-
-                <p:outputLabel />
-                <p:commandButton value="Adicionar" update="dependentePanel dependentesTable"
-                                 process="dependentePanel"
-                                 action="#{cadastroServidorBean.adicionarDependente()}"
-                                 oncomplete="if(!args.validationFailed) PF('dependenteDialog').hide();" />
-
-            </p:panelGrid>
-        </h:panelGroup>
-
-    </p:dialog>
 
 </ui:composition>

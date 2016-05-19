@@ -1,0 +1,71 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <p:dialog widgetVar="telefoneDialog" header="Adicionar telefone" 
+              resizable="false" style="width: 400px;" responsive="true">
+
+        <h:panelGroup id="telefonePanel" layout="block" styleClass="ui-fluid">
+
+            <p:messages autoUpdate="false" id="msgTelefoneDialog"/>
+
+            <p:panelGrid columns="2" layout="grid" styleClass="panelgrid-noborder"
+                         columnClasses="ui-grid-col-4, ui-grid-col-8">
+
+                <p:outputLabel value="Número" for="numeroTelefone" />
+                <p:inputMask mask="(99) 9999-9999" id="numeroTelefone" value="#{cadastroServidorBean.telefone.numero}" />
+
+                <p:outputLabel value="Tipo" for="tipoTelefone" />
+                <p:selectOneRadio id="tipoTelefone" value="#{cadastroServidorBean.telefone.tipo}" 
+                                  layout="pageDirection">
+                    <f:selectItems value="#{cadastroServidorBean.tiposTelefone}" var="tipo"
+                                   itemLabel="#{tipo.descricao}" itemValue="#{tipo}" />
+                </p:selectOneRadio>
+
+
+                <p:outputLabel />
+                <p:commandButton value="Adicionar" update="telefonePanel telefonesTable"
+                                 process="telefonePanel"
+                                 action="#{cadastroServidorBean.adicionarTelefone()}"
+                                 oncomplete="if(!args.validationFailed) PF('telefoneDialog').hide();" />
+
+            </p:panelGrid>
+        </h:panelGroup>
+
+    </p:dialog>
+
+    <p:dialog widgetVar="editarTelefoneDialog" id="editarTelefoneDialog" header="Editar telefone" 
+              resizable="false" style="width: 480px;" responsive="true">
+
+        <h:panelGroup  layout="block" styleClass="ui-fluid" id="editarTelefonePanel">
+
+
+            <p:panelGrid columns="2" layout="grid" styleClass="panelgrid-noborder"
+                         columnClasses="ui-grid-col-4, ui-grid-col-8">
+
+                <p:outputLabel value="Número" for="editarNumeroTelefone" />
+                <p:inputMask mask="(99) 9999-9999" id="editarNumeroTelefone" value="#{cadastroServidorBean.telefoneSelecionado.numero}" />
+
+                <p:outputLabel value="Tipo" for="editarTipoTelefone" />
+                <p:selectOneRadio id="editarTipoTelefone" value="#{cadastroServidorBean.telefoneSelecionado.tipo}"
+                                  layout="pageDirection">
+                    <f:selectItems value="#{cadastroServidorBean.tiposTelefone}" var="tipo"
+                                   itemLabel="#{tipo.descricao}" itemValue="#{tipo}" />
+                </p:selectOneRadio>
+
+
+                <p:outputLabel />
+                <p:commandButton value="Editar" action="#{cadastroServidorBean.editarTelefone()}"
+                                 process="frm:editarTelefonePanel" update="telefonesTable"
+                                 oncomplete="if(!args.validationFailed) PF('editarTelefoneDialog').hide();" />
+
+            </p:panelGrid>
+        </h:panelGroup>
+
+    </p:dialog>
+
+
+
+</ui:composition>

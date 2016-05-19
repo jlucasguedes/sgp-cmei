@@ -4,8 +4,7 @@
                 xmlns:p="http://primefaces.org/ui" >
 
     <div class="ui-fluid">
-        <p:panel header="Documentos">
-            <p:messages />
+        <p:panel header="Documentos" id="documentos">
             <p:panelGrid columns="2" columnClasses="ui-grid-col-2, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder">
                 <p:outputLabel value="CPF" for="cpf" />
                 <p:inputMask mask="999.999.999-99" id="cpf" value="#{cadastroServidorBean.servidor.cpf}"/>

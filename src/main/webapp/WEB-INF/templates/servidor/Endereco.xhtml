@@ -4,8 +4,7 @@
                 xmlns:p="http://primefaces.org/ui">
 
     <div class="ui-fluid">
-        <p:panel header="Dados residências">
-            <p:messages />
+        <p:panel header="Dados residências" id="enderecoPanel">
             <p:panelGrid columns="2" columnClasses="ui-grid-col-2, ui-grid-col-4" layout="grid" styleClass="panelgrid-noborder" >
                 <p:outputLabel value="CEP" for="cep" />
                 <p:inputMask mask="99999999" id="cep" value="#{cadastroServidorBean.servidor.endereco.cep}" />
